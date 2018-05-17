@@ -27,7 +27,12 @@ class App extends Component {
     event.preventDefault();
     console.log(this.state);
     this.setState({
-      user: this.state.user,
+      // user: this.state.user,
+      user: {
+        name: '',
+        city: '',
+        zip: '',
+      }
     });
   }
 
@@ -41,7 +46,7 @@ class App extends Component {
           <input type="submit" value="Submit form"/>
         </form>
         <p>
-          {this.state.user.name} is from {this.state.user.city}
+          {this.state.user.name} is from {this.state.user.city} and has this {this.state.user.zip}
         </p>
       </div>
     );
